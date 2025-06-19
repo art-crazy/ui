@@ -18,5 +18,10 @@ export default defineConfig({
             external: ['react', 'react-dom'],
         },
         sourcemap: true,
-    }
+    },
+    resolve: {
+        alias: {
+            '@': '/src',
+        },
+    },
 })
