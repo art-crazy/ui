@@ -3,12 +3,14 @@ import react from '@vitejs/plugin-react';
 import dts from 'vite-plugin-dts';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { libInjectCss } from 'vite-plugin-lib-inject-css';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
     plugins: [
         react(),
+        libInjectCss(),
         dts({
             tsconfigPath: './tsconfig.json',
             insertTypesEntry: true,
