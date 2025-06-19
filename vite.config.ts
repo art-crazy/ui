@@ -50,7 +50,6 @@ export default defineConfig({
                 'next'
             ],
             output: {
-                preserveModules: true,
                 dir: 'dist',
             },
         },
@@ -58,5 +57,6 @@ export default defineConfig({
         emptyOutDir: true,
         sourcemap: true,
         minify: false,
+        cssCodeSplit: false,
     },
 });
