@@ -7,17 +7,19 @@ import NavItem from "../Navigation/NavItem";
 
 const Header = () => {
 
-  const handleLogoClick = (e: React.MouseEvent) => {
-    // if (pathname === '/') {
-      e.preventDefault();
-      window.location.reload();
-    // }
-  };
+  // const handleLogoClick = (e: React.MouseEvent) => {
+  //   // if (pathname === '/') {
+  //     e.preventDefault();
+  //     window.location.reload();
+  //   // }
+  // };
 
   return (
     <>
       <header className={styles.header}>
-        <Link href="/" className={styles.logo} onClick={handleLogoClick}>
+        <Link href="/" className={styles.logo}
+              // onClick={handleLogoClick}
+        >
           <span role="img" aria-label="Логотип">🍴</span> Что приготовить
         </Link>
         <nav className={styles.headerRight} aria-label="Основная навигация">
