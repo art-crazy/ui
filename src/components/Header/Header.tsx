@@ -1,21 +1,17 @@
-'use client';
-
 import React from 'react';
 import Link from 'next/link';
-import {usePathname} from 'next/navigation';
 import styles from './Header.module.scss';
 import Search from './Search/Search';
 import MobileNav from './MobileNav/MobileNav';
 import NavItem from "../Navigation/NavItem";
 
 const Header = () => {
-  const pathname = usePathname();
 
   const handleLogoClick = (e: React.MouseEvent) => {
-    if (pathname === '/') {
+    // if (pathname === '/') {
       e.preventDefault();
       window.location.reload();
-    }
+    // }
   };
 
   return (
