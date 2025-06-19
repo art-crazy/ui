@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import styles from './MobileNav.module.scss';
 import NavItem from '@/components/Navigation/NavItem';

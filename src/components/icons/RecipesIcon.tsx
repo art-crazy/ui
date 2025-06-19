@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 
 interface RecipesIconProps {
@@ -48,4 +46,4 @@ const RecipesIcon: React.FC<RecipesIconProps> = ({ className }) => {
   );
 };
 
-export default RecipesIcon; 
+export default RecipesIcon;
