@@ -32,14 +32,10 @@ export default defineConfig({
     },
     build: {
         lib: {
-            entry: {
-                LayoutWrapper: path.resolve(__dirname, 'src/components/hoc/LayoutWrapper.tsx'),
-                Header: path.resolve(__dirname, 'src/components/Header/Header.tsx'),
-                Footer: path.resolve(__dirname, 'src/components/Footer/Footer.tsx'),
-            },
+            entry: path.resolve(__dirname, 'src/index.ts'),
             name: 'ui-hookapedia',
             formats: ['es', 'cjs'],
-            fileName: (format, entryName) => `${entryName}.${format === 'es' ? 'js' : 'cjs'}`,
+            fileName: (format) => `ui-hookapedia.${format === 'es' ? 'js' : 'cjs'}`,
         },
         rollupOptions: {
             external: [
