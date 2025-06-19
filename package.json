@@ -9,21 +9,6 @@
       "import": "./dist/ui-hookapedia.js",
       "require": "./dist/ui-hookapedia.cjs",
       "types": "./dist/index.d.ts"
-    },
-    "./LayoutWrapper": {
-      "import": "./dist/LayoutWrapper.js",
-      "require": "./dist/LayoutWrapper.js",
-      "types": "./dist/LayoutWrapper.d.ts"
-    },
-    "./Header": {
-      "import": "./dist/Header.js",
-      "require": "./dist/Header.js",
-      "types": "./dist/Header.d.ts"
-    },
-    "./Footer": {
-      "import": "./dist/Footer.js",
-      "require": "./dist/Footer.js",
-      "types": "./dist/Footer.d.ts"
     }
   },
   "files": [
