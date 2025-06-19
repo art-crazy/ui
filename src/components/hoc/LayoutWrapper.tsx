@@ -7,12 +7,10 @@ interface LayoutProps {
     children: ReactNode;
 }
 
-const LayoutWrapper  = ({ children }: LayoutProps) => (
+export const LayoutWrapper  = ({ children }: LayoutProps) => (
     <>
         <Header />
         <main className={styles.main}>{children}</main>
         <Footer />
     </>
 );
-
-export default LayoutWrapper;
