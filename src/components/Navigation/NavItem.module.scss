@@ -1,0 +1,28 @@
+@use '@/styles/vars.scss' as *;
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #666;
+  transition: color 0.2s;
+
+  &:hover {
+    color: $primary-color;
+  }
+
+  &.active {
+    color: $primary-color;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  span {
+    font-size: 15px;
+    line-height: 1.2;
+  }
+} 

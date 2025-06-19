@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import {usePathname} from 'next/navigation';
 import styles from './Header.module.scss';
 import Search from './Search/Search';
 import MobileNav from './MobileNav/MobileNav';
