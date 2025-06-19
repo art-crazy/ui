@@ -10,8 +10,8 @@ export default defineConfig({
     build: {
         lib: {
             entry: 'src/index.ts',
-            name: 'SchoolUIKit',
-            fileName: 'school-ui-kit',
+            name: 'uiHookapedia',
+            fileName: 'ui-hookapedia',
             formats: ['es'],
         },
         rollupOptions: {
