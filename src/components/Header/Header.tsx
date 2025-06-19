@@ -4,7 +4,7 @@ import Search from './Search/Search';
 import MobileNav from './MobileNav/MobileNav';
 import NavItem from "../Navigation/NavItem";
 
-const Header = () => {
+export const Header = () => {
   // const pathname = usePathname();
 
   const handleLogoClick = (e: React.MouseEvent) => {
@@ -32,5 +32,3 @@ const Header = () => {
     </>
   );
 };
-
-export default Header;
