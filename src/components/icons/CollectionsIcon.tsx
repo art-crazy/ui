@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 
 interface CollectionsIconProps {
@@ -48,4 +46,4 @@ const CollectionsIcon: React.FC<CollectionsIconProps> = ({ className }) => {
   );
 };
 
-export default CollectionsIcon; 
+export default CollectionsIcon;
