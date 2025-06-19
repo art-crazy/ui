@@ -8,10 +8,9 @@ interface LayoutProps {
 }
 
 export const LayoutWrapper = ({ children, HeaderChild }: LayoutProps) => (
-    <div>
-        <div>test</div>
+    <>
         <HeaderChild />
         <main className={styles.main}>{children}</main>
         <Footer />
-    </div>
+    </>
 );
