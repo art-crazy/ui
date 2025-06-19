@@ -9,14 +9,14 @@ const Search = () => {
   const [query, setQuery] = useState('');
   const router = useRouter();
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (query.trim()) {
-      router.push(`/recepty?search=${encodeURIComponent(query.trim())}`);
-    } else {
-      router.push('/recepty');
-    }
-  };
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   if (query.trim()) {
+  //     router.push(`/recepty?search=${encodeURIComponent(query.trim())}`);
+  //   } else {
+  //     router.push('/recepty');
+  //   }
+  // };
 
   return (
     <form className={styles.searchContainer} onSubmit={handleSubmit} role="search">
