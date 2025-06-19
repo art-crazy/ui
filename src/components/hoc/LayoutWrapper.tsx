@@ -1,5 +1,5 @@
 // import Header from '../Header/Header';
-// import Footer from '../Footer/Footer';
+import Footer from '../Footer/Footer';
 import styles from './LayoutWrapper.module.scss';
 import {ReactNode} from 'react';
 
@@ -12,6 +12,6 @@ export const LayoutWrapper  = ({ children }: LayoutProps) => (
         <div>test</div>
         {/*<Header/>*/}
         <main className={styles.main}>{children}</main>
-        {/*<Footer/>*/}
+        <Footer/>
     </>
 );
