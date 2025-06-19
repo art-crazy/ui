@@ -1,8 +1,6 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import styles from './NavItem.module.scss';
 import RecipesIcon from "../icons/RecipesIcon";
 import CollectionsIcon from "../icons/CollectionsIcon";
@@ -14,7 +12,7 @@ interface NavItemProps {
 }
 
 const NavItem: React.FC<NavItemProps> = ({ type, className, iconClassName }) => {
-  const pathname = usePathname();
+  // const pathname = usePathname();
 
   const config = {
     recipes: {
@@ -32,18 +30,20 @@ const NavItem: React.FC<NavItemProps> = ({ type, className, iconClassName }) => 
   };
 
   const { href, label, icon: Icon, activePath } = config[type];
-  const isActive = pathname === activePath;
+  // const isActive = pathname === activePath;
 
   return (
-    <Link
-      href={href}
-      className={`${styles.navItem} ${isActive ? styles.active : ''} ${className || ''}`}
-      aria-label={label}
-      aria-current={isActive ? 'page' : undefined}
-    >
-      <Icon className={`${styles.icon} ${iconClassName || ''}`} aria-hidden="true" />
-      <span>{label}</span>
-    </Link>
+      <a
+          href={href}
+          className={`${styles.navItem} 
+      // ${isActive ? styles.active : ''}
+       ${className || ''}`}
+          aria-label={label}
+          // aria-current={isActive ? 'page' : undefined}
+      >
+        <Icon className={`${styles.icon} ${iconClassName || ''}`} aria-hidden="true" />
+        <span>{label}</span>
+      </a>
   );
 };
 
