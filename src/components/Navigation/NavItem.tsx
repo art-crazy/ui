@@ -4,8 +4,8 @@ import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import styles from './NavItem.module.scss';
-import RecipesIcon from '@/components/icons/RecipesIcon';
-import CollectionsIcon from '@/components/icons/CollectionsIcon';
+import RecipesIcon from "../icons/RecipesIcon";
+import CollectionsIcon from "../icons/CollectionsIcon";
 
 interface NavItemProps {
   type: 'recipes' | 'collections';
@@ -15,7 +15,7 @@ interface NavItemProps {
 
 const NavItem: React.FC<NavItemProps> = ({ type, className, iconClassName }) => {
   const pathname = usePathname();
-  
+
   const config = {
     recipes: {
       href: '/recepty',
@@ -47,4 +47,4 @@ const NavItem: React.FC<NavItemProps> = ({ type, className, iconClassName }) => 
   );
 };
 
-export default NavItem; 
+export default NavItem;

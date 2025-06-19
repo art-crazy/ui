@@ -6,7 +6,7 @@ import {usePathname} from 'next/navigation';
 import styles from './Header.module.scss';
 import Search from './Search/Search';
 import MobileNav from './MobileNav/MobileNav';
-import NavItem from '@/components/Navigation/NavItem';
+import NavItem from "../Navigation/NavItem";
 
 const Header = () => {
   const pathname = usePathname();
