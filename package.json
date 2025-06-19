@@ -9,13 +9,28 @@
       "import": "./dist/ui-hookapedia.js",
       "require": "./dist/ui-hookapedia.cjs",
       "types": "./dist/index.d.ts"
+    },
+    "./LayoutWrapper": {
+      "import": "./dist/components/hoc/LayoutWrapper.js",
+      "require": "./dist/components/hoc/LayoutWrapper.js",
+      "types": "./dist/components/hoc/LayoutWrapper.d.ts"
+    },
+    "./Header": {
+      "import": "./dist/components/Header/Header.js",
+      "require": "./dist/components/Header/Header.js",
+      "types": "./dist/components/Header/Header.d.ts"
+    },
+    "./Footer": {
+      "import": "./dist/components/Footer/Footer.js",
+      "require": "./dist/components/Footer/Footer.js",
+      "types": "./dist/components/Footer/Footer.d.ts"
     }
   },
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "vite build",
+    "build": "vite build && node ./add-use-client.js",
     "dev": "vite"
   },
   "peerDependencies": {
@@ -30,6 +45,7 @@
     "@types/react-dom": "^18.0.0",
     "@vitejs/plugin-react": "^4.5.2",
     "next": "^15.3.4",
+    "rollup-plugin-preserve-directives": "^0.4.0",
     "sass": "^1.89.2",
     "tsup": "^7.2.0",
     "typescript": "^5.0.0",

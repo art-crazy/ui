@@ -1,7 +1,6 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import dts from 'vite-plugin-dts';
-// import { libInjectCss } from 'vite-plugin-lib-inject-css';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -10,7 +9,6 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 export default defineConfig({
     plugins: [
         react(),
-        // libInjectCss(),
         dts({
             tsconfigPath: './tsconfig.json',
             insertTypesEntry: true,
@@ -32,21 +30,25 @@ export default defineConfig({
     },
     build: {
         lib: {
-            entry: 'src/index.ts',
-            name: 'UiHookapedia',
-            fileName: 'ui-hookapedia',
+            entry: {
+                LayoutWrapper: path.resolve(__dirname, 'src/components/hoc/LayoutWrapper.tsx'),
+                Header: path.resolve(__dirname, 'src/components/Header/Header.tsx'),
+                Footer: path.resolve(__dirname, 'src/components/Footer/Footer.tsx'),
+            },
+            name: 'ui-hookapedia',
             formats: ['es', 'cjs'],
+            fileName: (format, entryName) => `${entryName}.${format === 'es' ? 'js' : 'cjs'}`,
         },
         rollupOptions: {
             external: ['react', 'react-dom', 'next'],
             output: {
-                globals: {
-                    react: 'React',
-                    'react-dom': 'ReactDOM',
-                    next: 'Next',
-                },
+                preserveModules: true,
+                dir: 'dist',
             },
         },
+        outDir: 'dist',
+        emptyOutDir: true,
         sourcemap: true,
+        minify: false,
     },
 });
