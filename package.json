@@ -1,6 +1,6 @@
 {
   "name": "ui-hookapedia",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "main": "dist/ui-hookapedia.cjs",
   "module": "dist/ui-hookapedia.js",
   "types": "dist/index.d.ts",
