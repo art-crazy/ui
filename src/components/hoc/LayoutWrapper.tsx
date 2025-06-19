@@ -1,4 +1,4 @@
-import Header from '../Header/Header';
+// import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import styles from './LayoutWrapper.module.scss';
 import {ReactNode} from 'react';
@@ -9,7 +9,7 @@ interface LayoutProps {
 
 export const LayoutWrapper  = ({ children }: LayoutProps) => (
     <>
-        <Header />
+        {/*<Header />*/}
         <main className={styles.main}>{children}</main>
         <Footer />
     </>
