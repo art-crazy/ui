@@ -35,8 +35,8 @@ const NavItem: React.FC<NavItemProps> = ({ type, className, iconClassName }) => 
   return (
       <a
           href={href}
-          className={`${styles.navItem} 
-      // ${isActive ? styles.active : ''}
+          className={`${styles.navItem}
+          // %{isActive ? styles.active : ''}
        ${className || ''}`}
           aria-label={label}
           // aria-current={isActive ? 'page' : undefined}
