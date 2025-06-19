@@ -40,7 +40,13 @@ export default defineConfig({
             fileName: (format, entryName) => `${entryName}.${format === 'es' ? 'js' : 'cjs'}`,
         },
         rollupOptions: {
-            external: ['react', 'react-dom', 'next'],
+            external: [
+                /^react/,
+                /^next/,
+                'react',
+                'react-dom',
+                'next'
+            ],
             output: {
                 preserveModules: true,
                 dir: 'dist',
