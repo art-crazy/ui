@@ -30,7 +30,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "vite build",
+    "build": "vite build && node ./add-use-client.js",
     "dev": "vite"
   },
   "peerDependencies": {
