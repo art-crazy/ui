@@ -9,11 +9,6 @@
       "import": "./dist/ui-hookapedia.js",
       "require": "./dist/ui-hookapedia.cjs",
       "types": "./dist/index.d.ts"
-    },
-    "./LayoutWrapper": {
-      "import": "./dist/LayoutWrapper.js",
-      "require": "./dist/LayoutWrapper.js",
-      "types": "./dist/LayoutWrapper.d.ts"
     }
   },
   "files": [
