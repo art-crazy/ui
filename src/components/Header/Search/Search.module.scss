@@ -1,0 +1,67 @@
+@use '@/styles/vars.scss' as *;
+
+.searchContainer {
+  position: relative;
+  flex: 1;
+  margin: 0 32px;
+  display: flex;
+  align-items: center;
+}
+
+.search {
+  width: 100%;
+  padding: 8px 16px 8px 40px;
+  border-radius: 8px 0 0 8px;
+  border: 1px solid #eee;
+  background: #fafafa;
+  font-size: 14px;
+  border-right: none;
+
+  &:focus {
+    outline: none;
+    border-color: #ddd;
+    background: #fff;
+  }
+}
+
+.searchIcon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  pointer-events: none;
+}
+
+.searchButton {
+  padding: 8px 24px;
+  background: $primary-color;
+  color: white;
+  border: 1px solid $primary-color;
+  border-radius: 0 8px 8px 0;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+
+  &:hover {
+    background: #ff8533;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .searchContainer {
+    margin: 0 4px;
+    max-width: none;
+  }
+
+  .search {
+    border-radius: 8px;
+    border-right: 1px solid #eee;
+  }
+
+  .searchButton {
+    display: none;
+  }
+}

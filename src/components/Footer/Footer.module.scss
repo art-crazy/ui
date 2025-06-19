@@ -1,0 +1,68 @@
+@use '@/styles/vars.scss' as *;
+
+.footer {
+  background-color: $background-color;
+  border-top: 1px solid #eee;
+  padding: 32px 0 16px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  position: relative;
+
+  .section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 120px;
+    margin-bottom: 16px;
+  }
+  .socials {
+    display: flex;
+    gap: 8px;
+  }
+  .storeIcon {
+    width: 100px;
+    margin-right: 8px;
+  }
+  a {
+    color: #444;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  b {
+    margin-bottom: 4px;
+  }
+  .copyright {
+    bottom: 4px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    color: #aaa;
+    margin: 36px 0 52px 0;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .footer {
+    padding: 24px 16px 16px;
+
+    .section {
+      min-width: 100%;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .socials {
+      justify-content: center;
+    }
+
+    .copyright {
+      margin: 24px 0 32px 0;
+    }
+  }
+}
