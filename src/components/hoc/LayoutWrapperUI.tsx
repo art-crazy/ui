@@ -1,4 +1,4 @@
-import styles from './LayoutWrapper.moduleUI.scss';
+import styles from './LayoutWrapperUI.module.scss';
 import {ComponentType, ReactNode} from 'react';
 import FooterUI from "@/components/Footer/FooterUI";
 

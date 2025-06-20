@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './MobileNav.moduleUI.scss';
+import styles from './MobileNav.module.scss';
 import NavItem from '@/components/Navigation/NavItem';
 
 const MobileNavUI: React.FC = () => {
