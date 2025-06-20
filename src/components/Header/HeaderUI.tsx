@@ -1,10 +1,10 @@
 import React from 'react';
-import styles from './Header.module.scss';
+import styles from './HeaderUI.module.scss';
 import Search from './Search/Search';
-import MobileNav from './MobileNav/MobileNav';
+import MobileNavUI from './MobileNav/MobileNavUI';
 import NavItem from "../Navigation/NavItem";
 
-export const Header = () => {
+export const HeaderUI = () => {
   // const pathname = usePathname();
 
   const handleLogoClick = (e: React.MouseEvent) => {
@@ -28,7 +28,7 @@ export const Header = () => {
           </div>
         </nav>
       </header>
-      <MobileNav />
+      <MobileNavUI />
     </>
   );
 };

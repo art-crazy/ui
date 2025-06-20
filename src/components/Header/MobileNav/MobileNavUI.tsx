@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from './MobileNav.module.scss';
+import styles from './MobileNav.moduleUI.scss';
 import NavItem from '@/components/Navigation/NavItem';
 
-const MobileNav: React.FC = () => {
+const MobileNavUI: React.FC = () => {
     return (
         <nav className={styles.mobileNav}>
             <NavItem type="collections" className={styles.mobileNavItem} />
@@ -11,4 +11,4 @@ const MobileNav: React.FC = () => {
     );
 };
 
-export default MobileNav;
+export default MobileNavUI;

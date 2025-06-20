@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Footer.module.scss';
 
-export default function Footer() {
+export default function FooterUI() {
   return (
     <footer className={styles.footer}>
       <nav className={styles.section} aria-label="О нас">
