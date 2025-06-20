@@ -1,18 +1,16 @@
-import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
 import styles from './LayoutWrapper.module.scss';
-import {ReactNode} from 'react';
+import { ReactNode, ComponentType } from 'react';
+import Footer from "@/components/Footer/Footer";
 
 interface LayoutProps {
     children: ReactNode;
+    HeaderChild: ComponentType;
 }
 
-const LayoutWrapper  = ({ children }: LayoutProps) => (
+export const LayoutWrapper = ({ children, HeaderChild }: LayoutProps) => (
     <>
-        <Header />
+        <HeaderChild />
         <main className={styles.main}>{children}</main>
         <Footer />
     </>
 );
-
-export default LayoutWrapper;

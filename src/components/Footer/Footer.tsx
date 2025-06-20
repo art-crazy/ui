@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 import styles from './Footer.module.scss';
 
 export default function Footer() {
@@ -7,9 +6,9 @@ export default function Footer() {
     <footer className={styles.footer}>
       <nav className={styles.section} aria-label="О нас">
         <b>О нас</b>
-        <Link href="/istoriya">Наша история</Link>
-        <Link href="/blog">Блог</Link>
-        <Link href="/faq">Вопросы и ответы</Link>
+        <a href="/istoriya">Наша история</a>
+        <a href="/blog">Блог</a>
+        <a href="/faq">Вопросы и ответы</a>
       </nav>
       <nav className={styles.section} aria-label="Помощь">
         <b>Помощь</b>

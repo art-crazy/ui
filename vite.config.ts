@@ -1,52 +1,29 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import dts from 'vite-plugin-dts';
-// import { libInjectCss } from 'vite-plugin-lib-inject-css';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import dts from 'vite-plugin-dts'
+import { libInjectCss } from 'vite-plugin-lib-inject-css'
 
 export default defineConfig({
     plugins: [
         react(),
-        // libInjectCss(),
-        dts({
-            tsconfigPath: './tsconfig.json',
-            insertTypesEntry: true,
-            copyDtsFiles: true,
-        }),
+        dts({ insertTypesEntry: true }),
+        libInjectCss(),
     ],
-    resolve: {
-        alias: {
-            '@': path.resolve(__dirname, 'src'),
-        },
-    },
-    css: {
-        preprocessorOptions: {
-            scss: {
-                additionalData: '',
-                includePaths: [path.resolve(__dirname, 'src')],
-            },
-        },
-    },
     build: {
         lib: {
             entry: 'src/index.ts',
-            name: 'UiHookapedia',
+            name: 'uiHookapedia',
             fileName: 'ui-hookapedia',
-            formats: ['es', 'cjs'],
+            formats: ['es'],
         },
         rollupOptions: {
-            external: ['react', 'react-dom', 'next'],
-            output: {
-                globals: {
-                    react: 'React',
-                    'react-dom': 'ReactDOM',
-                    next: 'Next',
-                },
-            },
+            external: ['react', 'react-dom', 'react/jsx-runtime'],
         },
         sourcemap: true,
     },
-});
+    resolve: {
+        alias: {
+            '@': '/src',
+        },
+    },
+})
