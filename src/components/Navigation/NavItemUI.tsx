@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './NavItem.module.scss';
+import styles from './NavItemUI.module.scss';
 import RecipesIcon from "../icons/RecipesIcon";
 import CollectionsIcon from "../icons/CollectionsIcon";
 
@@ -9,7 +9,7 @@ interface NavItemProps {
   iconClassName?: string;
 }
 
-const NavItem: React.FC<NavItemProps> = ({ type, className, iconClassName }) => {
+const NavItemUI: React.FC<NavItemProps> = ({ type, className, iconClassName }) => {
   // const pathname = usePathname();
 
   const config = {
@@ -45,4 +45,4 @@ const NavItem: React.FC<NavItemProps> = ({ type, className, iconClassName }) => 
   );
 };
 
-export default NavItem;
+export default NavItemUI;

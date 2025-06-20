@@ -1,12 +1,12 @@
 import React from 'react';
-import styles from './MobileNav.module.scss';
-import NavItem from '@/components/Navigation/NavItem';
+import styles from './MobileNavUI.module.scss';
+import NavItemUI from '@/components/Navigation/NavItemUI';
 
 const MobileNavUI: React.FC = () => {
     return (
         <nav className={styles.mobileNav}>
-            <NavItem type="collections" className={styles.mobileNavItem} />
-            <NavItem type="recipes" className={styles.mobileNavItem} />
+            <NavItemUI type="collections" className={styles.mobileNavItem} />
+            <NavItemUI type="recipes" className={styles.mobileNavItem} />
         </nav>
     );
 };
