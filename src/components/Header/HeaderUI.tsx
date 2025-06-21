@@ -24,7 +24,7 @@ export const HeaderUI = () => {
           <Search />
           <div className={styles.desktopNav}>
             <NavItemUI type="collections" className={styles.desktopNavItem} />
-            <NavItemUI type="recipes" className={styles.desktopNavItem} />
+            <NavItemUI type="mix" className={styles.desktopNavItem} />
           </div>
         </nav>
       </header>

@@ -4,7 +4,7 @@ import RecipesIcon from "../icons/RecipesIcon";
 import CollectionsIcon from "../icons/CollectionsIcon";
 
 interface NavItemProps {
-  type: 'recipes' | 'collections';
+  type: 'mix' | 'collections';
   className?: string;
   iconClassName?: string;
 }

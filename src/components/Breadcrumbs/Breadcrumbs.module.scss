@@ -1,0 +1,53 @@
+.breadcrumbs {
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+    @media screen and (max-width: 650px) {
+        margin-bottom: 0.5rem;
+    }
+        .paths {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .homeLink {
+        display: flex;
+        align-items: center;
+        color: #666;
+        text-decoration: none;
+        transition: color 0.2s;
+
+        &:hover {
+            color: #000;
+        }
+    }
+
+    .path {
+        color: #666;
+        text-decoration: none;
+        transition: color 0.2s;
+
+        &:hover {
+            color: #000;
+        }
+    }
+
+    .separator {
+        color: #666;
+    }
+
+    .titleWrapper {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .title {
+        font-weight: 600;
+        margin: 0;
+    }
+}

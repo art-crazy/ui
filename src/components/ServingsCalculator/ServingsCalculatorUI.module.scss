@@ -1,0 +1,62 @@
+.servingsBlock {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #f8f8f8;
+  border-radius: 12px;
+  padding: 12px 20px;
+  width: fit-content;
+  border: 1px solid #eee;
+  justify-content: center;
+
+  button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 4px 12px;
+    color: #222;
+    transition: color 0.2s;
+
+    &:hover {
+      color: #666;
+    }
+  }
+
+  span {
+    font-size: 15px;
+    color: #444;
+  }
+}
+
+.ingredientsTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.ingredientsList {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.ingredientsList li {
+  margin-bottom: 12px;
+  color: #444;
+  position: relative;
+  padding-left: 14px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 18px;
+  line-height: 1.5;
+
+  &::before {
+    content: "•";
+    position: absolute;
+    left: -4px;
+    color: #222;
+    font-size: 1.2em;
+  }
+}

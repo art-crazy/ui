@@ -6,7 +6,7 @@ const MobileNavUI: React.FC = () => {
     return (
         <nav className={styles.mobileNav}>
             <NavItemUI type="collections" className={styles.mobileNavItem} />
-            <NavItemUI type="recipes" className={styles.mobileNavItem} />
+            <NavItemUI type="mix" className={styles.mobileNavItem} />
         </nav>
     );
 };
