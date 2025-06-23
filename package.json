@@ -40,5 +40,8 @@
     "library"
   ],
   "license": "ISC",
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "lucide-react": "^0.522.0"
+  }
 }

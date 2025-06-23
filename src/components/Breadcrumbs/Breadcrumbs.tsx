@@ -1,6 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
-import { ChevronRight, Home } from 'lucide-react';
+import {ChevronRight, Home} from 'lucide-react';
 import styles from './Breadcrumbs.module.scss';
 
 interface Path {
@@ -19,17 +18,17 @@ export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ title, paths }) => {
             <nav aria-label="Хлебные крошки">
                 <ol className={styles.paths}>
                     <li>
-                        <Link href="/" className={styles.homeLink}>
+                        <a href="/" className={styles.homeLink}>
                             <Home size={16} />
-                        </Link>
+                        </a>
                     </li>
                     {paths.map((path, index) => (
                         <React.Fragment key={`${path.url}_${index}`}>
                             <li className={styles.titleWrapper}>
                                 <ChevronRight className={styles.separator} size={16} />
-                                <Link href={path.url} className={styles.path}>
+                                <a href={path.url} className={styles.path}>
                                     {path.title}
-                                </Link>
+                                </a>
                             </li>
                         </React.Fragment>
                     ))}
