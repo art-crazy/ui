@@ -1,0 +1,335 @@
+@use '@/styles/vars' as *;
+
+.container {
+  @include page-container;
+}
+
+.topSection {
+  display: flex;
+  gap: 48px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.imageColumn {
+  //flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mainImage {
+  position: relative;
+  width: 750px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+.imageMain {
+  border-radius: $border-radius-m;
+  object-fit: cover;
+}
+
+.infoBlock {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0;
+    color: #222;
+  }
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  color: #FFB800;
+}
+
+.ratingText {
+  color: #666;
+  font-size: 15px;
+}
+
+.actionBtns {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.servingsCalculator {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ingredientsTitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.ingredientsList {
+  list-style: none;
+  padding: 0;
+}
+
+.ingredientsList li {
+  margin-bottom: 5px;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  width: 100%;
+}
+
+.saveBtn {
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.2s;
+  min-height: 42px;
+}
+
+.imagesRow {
+  display: flex;
+  gap: 16px;
+}
+
+.subImage {
+  flex: 1;
+  background: #eee;
+  border-radius: 6px;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #bbb;
+  font-size: 15px;
+}
+
+.instructions {
+  margin-bottom: 48px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 15vw;
+
+  h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: #222;
+    text-align: center;
+  }
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.step {
+  background: #fff;
+  border-radius: $border-radius-m;
+  padding: 32px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  border: 1px solid #f0f0f0;
+}
+
+.stepTitle {
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+  color: #222;
+}
+
+.stepImage {
+  border-radius: 12px;
+  margin-bottom: 24px;
+  position: relative;
+  width: 100%;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.image {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+.stepText {
+  font-size: 18px;
+}
+
+.commentsSection {
+  max-width: 800px;
+  margin-bottom: 48px;
+}
+
+.commentsTitle {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: #222;
+}
+
+.commentInput {
+  width: 100%;
+  min-height: 80px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  padding: 16px;
+  margin-bottom: 16px;
+  font-size: 15px;
+  resize: vertical;
+  transition: border-color 0.2s;
+
+  &:focus {
+    outline: none;
+    border-color: #222;
+  }
+}
+
+.postBtn {
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: $border-radius-m;
+  padding: 12px 32px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-bottom: 24px;
+
+  &:hover {
+    background: #333;
+  }
+}
+
+.comment {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  border: 1px solid #f0f0f0;
+}
+
+.commentHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.avatar {
+  font-size: 24px;
+}
+
+.userName {
+  font-weight: 600;
+  color: #222;
+}
+
+.commentDate {
+  color: #888;
+  font-size: 14px;
+}
+
+.commentText {
+  margin-bottom: 12px;
+  line-height: 1.5;
+  color: #444;
+}
+
+.commentActions {
+  display: flex;
+  gap: 20px;
+  color: #666;
+  font-size: 14px;
+}
+
+@media (min-width: 650px) and (max-width: 1025px) {
+  .instructions {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .actionBtns {
+    flex-wrap: wrap;
+  }
+
+  .topSection {
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .imageColumn {
+    width: 100%;
+  }
+
+  .mainImage {
+    width: 100%;
+    height: auto;
+  }
+
+  .infoBlock {
+    width: 100%;
+    align-items: center;
+
+    h1 {
+      font-size: 1.75rem;
+    }
+  }
+
+  .actionButtons {
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
+  }
+
+  .saveBtn {
+    width: 100%;
+  }
+
+  .instructions {
+    padding: 0;
+
+    h2 {
+      font-size: 1.75rem;
+      font-weight: 600;
+      margin-bottom: 24px;
+      color: #222;
+      text-align: center;
+    }
+  }
+
+  .step {
+    padding: 1rem;
+    margin-bottom: 16px;
+  }
+
+  .stepImage {
+    margin-bottom: 1rem;
+  }
+}
