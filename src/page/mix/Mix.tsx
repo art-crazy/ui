@@ -6,14 +6,10 @@ import {Breadcrumbs} from '@/components/Breadcrumbs/Breadcrumbs';
 import {Key} from 'react';
 
 interface PageProps {
-  params: Promise<{
-    recipe_id: string;
-  }>;
   recipe: any;
 }
 
-export async function Mix({params, recipe}: PageProps) {
-  const {recipe_id} = await params;
+export async function Mix({recipe}: PageProps) {
   
   return (
       <div className={styles.container}>
@@ -60,9 +56,9 @@ export async function Mix({params, recipe}: PageProps) {
             </div>
             <ServingsCalculatorUI recipe={recipe}/>
             <div className={styles.actionBtns}>
-              <SaveRecipeButton recipeId={recipe_id}/>
+              <SaveRecipeButton recipeId={recipe.recipe_id}/>
               <ShareButtonUI
-                  url={`/recepty/${recipe_id}`}
+                  url={`/recepty/${recipe.recipe_id}`}
                   title={recipe.title}
               />
             </div>
