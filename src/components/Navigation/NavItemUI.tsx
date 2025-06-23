@@ -27,6 +27,7 @@ const NavItemUI: React.FC<NavItemProps> = ({ type, className, iconClassName }) =
     }
   };
 
+  // @ts-ignore
   const { href, label, icon: Icon, activePath } = config[type];
   // const isActive = pathname === activePath;
 
