@@ -12,7 +12,7 @@ interface PageProps {
   recipe: any;
 }
 
-export default async function RecipePage({params, recipe}: PageProps) {
+export async function Mix({params, recipe}: PageProps) {
   const {recipe_id} = await params;
   
   return (
