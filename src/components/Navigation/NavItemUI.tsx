@@ -13,7 +13,7 @@ const NavItemUI: React.FC<NavItemProps> = ({ type, className, iconClassName }) =
   // const pathname = usePathname();
 
   const config = {
-    recipes: {
+    mix: {
       href: '/recepty',
       label: 'Все рецепты',
       icon: RecipesIcon,
