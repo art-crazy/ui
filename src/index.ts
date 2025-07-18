@@ -1,4 +1,4 @@
-export  { RecipeListSection } from "@/components/Filters/components/RecipeList/RecipeListSection";
+export { RecipeListSection } from "@/components/Filters/components/RecipeList/RecipeListSection";
 export { ButtonSearch } from "@/components/Filters/components/ButtonSearch";
 export { FilterGroup } from "@/components/Filters/components/FilterGroup";
 export { LayoutWrapperUI } from './components/hoc/LayoutWrapperUI';
