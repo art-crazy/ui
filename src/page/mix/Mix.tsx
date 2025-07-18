@@ -4,15 +4,16 @@ import ShareButtonUI from '@/components/ShareButton/ShareButtonUI';
 import {SaveRecipeButton} from '@/components/UI/SaveRecipeButton/SaveRecipeButton';
 import {Breadcrumbs} from '@/components/Breadcrumbs/Breadcrumbs';
 import {Key} from 'react';
+import { Container } from '@/components/Container';
 
 interface PageProps {
   recipe: any;
 }
 
 export async function Mix({recipe}: PageProps) {
-  
+
   return (
-      <div className={styles.container}>
+      <Container>
         <Breadcrumbs
             title={recipe.title}
             paths={[
@@ -87,6 +88,6 @@ export async function Mix({recipe}: PageProps) {
               ))}
           </section>
         }
-      </div>
+      </Container>
     );
 }
