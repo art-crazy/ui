@@ -12,3 +12,4 @@ export { ReceptyContent } from './components/ReceptyContent'
 export { Filters } from './components/Filters'
 export { RecipeListAll } from "./components/Filters/components/RecipeList/RecipeListSection/RecipeListAll";
 export { RecipeList } from "./components/Filters/components/RecipeList";
+export  {Pagination} from "./components/Filters/components/Pagination";
