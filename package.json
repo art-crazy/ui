@@ -1,6 +1,6 @@
 {
   "name": "ui-hookapedia",
-  "version": "1.0.58",
+  "version": "1.0.59",
   "description": "A reusable UI components library for React",
   "main": "./dist/ui-hookapedia.js",
   "module": "./dist/ui-hookapedia.js",
