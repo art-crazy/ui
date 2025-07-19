@@ -1,0 +1,368 @@
+@use '@/styles/vars.scss' as *;
+
+.section {
+  margin-bottom: 48px;
+  position: relative;
+
+  .sectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding-right: 96px;
+    margin-left: 15px;
+    .sectionTitle {
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+
+    .sectionLink {
+      color: #666;
+      text-decoration: none;
+      font-size: 0.9rem;
+
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+
+  .cardsContainer {
+    display: flex;
+    gap: 24px;
+    padding: 16px 0;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+
+    .card {
+      flex: 0 0 300px;
+      border-radius: $border-radius-m;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.2s ease-out;
+      transform-origin: center;
+      position: relative;
+      z-index: 1;
+      align-self: stretch;
+      &:first-child {
+        margin-left: 15px;
+      }
+
+      &:hover {
+        transform: scale(1.05);
+        z-index: 2;
+      }
+
+      .cardImage {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .cardContent {
+        padding: 16px;
+
+        .cardTitle {
+          font-size: 1.1rem;
+          margin-bottom: 8px;
+        }
+
+        .cardDescription {
+          font-size: 0.9rem;
+          color: #666;
+          margin-bottom: 12px;
+        }
+
+        .cardMeta {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 0.9rem;
+          color: #888;
+        }
+      }
+    }
+  }
+
+  .scrollArrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s, background-color 0.2s;
+    z-index: 3;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+
+    &:hover {
+      background: white;
+    }
+
+    &.left {
+      left: -20px;
+    }
+
+    &.right {
+      right: +40px;
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+      fill: #666;
+    }
+  }
+
+  &:hover {
+    .scrollArrow {
+      opacity: 1;
+    }
+  }
+}
+
+// Featured collection styles
+.featuredSection {
+  margin-bottom: 80px;
+  position: relative;
+
+  .sectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+    padding-right: 96px;
+    margin-left: 15px;
+    .sectionTitle {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+    .sectionLink {
+      color: #666;
+      text-decoration: none;
+      font-size: 1rem;
+
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+
+  .featuredCardsContainer {
+    display: flex;
+    gap: 32px;
+    padding: 24px 0;
+    align-items: center;
+    .featuredCard {
+      flex: 0 0 800px;
+      position: relative;
+      border-radius: $border-radius-m;
+      background: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      overflow: hidden;
+      transition: transform 0.2s ease-out;
+      aspect-ratio: 16/9;
+      transform-origin: center;
+      z-index: 1;
+
+      &:first-child {
+        margin-left: 15px;
+      }
+
+      &:hover {
+        transform: scale(1.03);
+        z-index: 2;
+      }
+
+      .featuredCardImage {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .featuredCardContent {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 32px;
+        background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+        color: white;
+
+        .featuredCardTitle {
+          font-size: 1.8rem;
+          font-weight: 600;
+          margin-bottom: 12px;
+        }
+
+        .featuredCardDescription {
+          font-size: 1.1rem;
+          color: rgba(255,255,255,0.9);
+          margin-bottom: 16px;
+          line-height: 1.5;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        .featuredCardMeta {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 1.1rem;
+          color: rgba(255,255,255,0.8);
+        }
+      }
+    }
+  }
+
+  .scrollArrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s, background-color 0.2s;
+    z-index: 3;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+
+    &:hover {
+      background: white;
+    }
+
+    &.left {
+      left: -24px;
+    }
+
+    &.right {
+      right: 40px;
+    }
+
+    svg {
+      width: 28px;
+      height: 28px;
+      fill: #666;
+    }
+  }
+
+  &:hover {
+    .scrollArrow {
+      opacity: 1;
+    }
+  }
+}
+
+// Скрываем стрелки на мобильных устройствах
+@media (max-width: 768px) {
+  .section, .featuredSection {
+    .scrollArrow {
+      display: none;
+    }
+  }
+}
+
+// Мобильные стили
+@media screen and (max-width: 650px) {
+  .section {
+    .sectionHeader {
+      padding-right: 1rem;
+      margin-bottom: 16px;
+
+      .sectionTitle {
+        font-size: 1.25rem;
+      }
+
+      .sectionLink {
+        font-size: 0.85rem;
+      }
+    }
+  }
+
+  .featuredSection {
+    margin-bottom: 48px;
+
+    .sectionHeader {
+      padding-right: 1rem;
+      margin-bottom: 20px;
+
+      .sectionTitle {
+        font-size: 1.5rem;
+      }
+
+      .sectionLink {
+        font-size: 0.9rem;
+      }
+    }
+
+    .featuredCardsContainer {
+      gap: 16px;
+      padding: 16px 0;
+
+
+      .featuredCard {
+        flex: 0 0 320px;
+        aspect-ratio: 4/3;
+
+        .featuredCardImageContainer {
+          height: 100%;
+        }
+
+        .featuredCardContent {
+          padding: 20px;
+
+          .featuredCardTitle {
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+          }
+
+          .featuredCardDescription {
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+            line-height: 1.4;
+          }
+
+          .featuredCardMeta {
+            font-size: 0.85rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.scrollableWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.scrollableContent {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .cardsContainer, .featuredCardsContainer {
+    min-width: min-content;
+  }
+}
