@@ -17,4 +17,3 @@ export { Pagination     } from "./components/Filters/components/Pagination";
 export { ContainerHome } from "./components/ContainerHome";
 export { DefaultCollection } from "@/components/Collections/DefaultCollection";
 export { FeaturedCollection } from "./components/Collections/FeaturedCollection";
-export { COLLECTION_TYPES, CollectionType } from "./types/collections";
