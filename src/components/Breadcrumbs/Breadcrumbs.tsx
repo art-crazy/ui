@@ -12,7 +12,7 @@ interface BreadcrumbsProps {
     paths: Path[];
 }
 
-export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ title, paths }) => {
+export const Breadcrumbs = ({ title, paths }: BreadcrumbsProps) => {
     return (
         <div className={styles.breadcrumbs}>
             <nav aria-label="Хлебные крошки">
