@@ -10,7 +10,9 @@
   ],
   "scripts": {
     "build": "vite build && tsc --emitDeclarationOnly",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "upd-version": "npm version patch",
+    "push-npm": "npm publish"
   },
   "peerDependencies": {
     "react": ">=18.0.0",

@@ -1,3 +1,4 @@
+export { Breadcrumbs } from "@/components/Breadcrumbs";
 export { RecipeListSection } from "@/components/Filters/components/RecipeList/RecipeListSection";
 export { ButtonSearch } from "@/components/Filters/components/ButtonSearch";
 export { FilterGroup } from "@/components/Filters/components/FilterGroup";
