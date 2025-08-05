@@ -5,13 +5,9 @@ import {SaveRecipeButton} from '@/components/UI/SaveRecipeButton/SaveRecipeButto
 import {Breadcrumbs} from '@/components/Breadcrumbs/Breadcrumbs';
 import {Key} from 'react';
 import { Container } from '@/components/Container';
+import {Recipe} from "@/types/recipe";
 
-interface PageProps {
-  recipe: any;
-}
-
-export async function Mix({recipe}: PageProps) {
-
+export const Mix = ({recipe}: { recipe: Recipe }) => {
   return (
       <Container>
         <Breadcrumbs
@@ -57,9 +53,9 @@ export async function Mix({recipe}: PageProps) {
             </div>
             <ServingsCalculatorUI recipe={recipe}/>
             <div className={styles.actionBtns}>
-              <SaveRecipeButton recipeId={recipe.recipe_id}/>
+              <SaveRecipeButton recipeId={String(recipe.id)}/>
               <ShareButtonUI
-                  url={`/recepty/${recipe.recipe_id}`}
+                  url={`/recepty/${String(recipe.id)}`}
                   title={recipe.title}
               />
             </div>
