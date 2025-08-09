@@ -3,13 +3,6 @@ import { Recipe } from '@/types/recipe';
 import styles from './RecipeList.module.scss';
 
 interface RecipeListProps {
-    filters: {
-        diet?: string;
-        cuisine?: string;
-        category?: string;
-        subcategory?: string;
-        search?: string;
-    };
     recipes: Recipe[];
     Image: any;
     Link: any;
