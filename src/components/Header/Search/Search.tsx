@@ -2,16 +2,16 @@ import React, {useState} from 'react';
 import styles from './Search.module.scss';
 import SearchIcon from '@/components/icons/SearchIcon';
 
-const Search = () => {
+const Search = (router: any) => {
   const [query, setQuery] = useState('');
   // const router = useRouter();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (query.trim()) {
-      // router.push(`/recepty?search=${encodeURIComponent(query.trim())}`);
+      router.push(`/recepty?search=${encodeURIComponent(query.trim())}`);
     } else {
-      // router.push('/recepty');
+      router.push('/recepty');
     }
   };
 
