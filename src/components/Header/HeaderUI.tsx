@@ -4,7 +4,7 @@ import Search from './Search/Search';
 import MobileNavUI from './MobileNav/MobileNavUI';
 import NavItemUI from "../Navigation/NavItemUI";
 
-export const HeaderUI = () => {
+export const HeaderUI = (router: any) => {
   // const pathname = usePathname();
 
   const handleLogoClick = (e: React.MouseEvent) => {
@@ -21,7 +21,9 @@ export const HeaderUI = () => {
           <span role="img" aria-label="Логотип">🍴</span> Что приготовить
         </a>
         <nav className={styles.headerRight} aria-label="Основная навигация">
-          <Search />
+          <Search
+              router={router}
+          />
           <div className={styles.desktopNav}>
             <NavItemUI type="collections" className={styles.desktopNavItem} />
             <NavItemUI type="mix" className={styles.desktopNavItem} />
