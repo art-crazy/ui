@@ -6,6 +6,7 @@ const Search = (router: any) => {
   const [query, setQuery] = useState('');
   // const router = useRouter();
 
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (query.trim()) {
