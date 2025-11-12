@@ -16,7 +16,11 @@ const LINKS = [
     },
 ]
 
-export default function FooterUI() {
+interface FooterUIProps {
+  siteName: string;
+}
+
+export default function FooterUI({ siteName }: FooterUIProps) {
   return (
     <footer className={styles.footer}>
       <nav className={styles.section} aria-label="О нас">
@@ -26,7 +30,7 @@ export default function FooterUI() {
           ))}
       </nav>
       <div className={styles.copyright}>
-        © 2025 «Что приготовить». Все права защищены.
+        © 2025 «{siteName}». Все права защищены.
       </div>
     </footer>
   );

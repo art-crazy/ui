@@ -5,12 +5,13 @@ import FooterUI from "@/components/Footer/FooterUI";
 interface LayoutProps {
     children: ReactNode;
     HeaderChild: ComponentType;
+    siteName: string;
 }
 
-export const LayoutWrapperUI = ({ children, HeaderChild }: LayoutProps) => (
+export const LayoutWrapperUI = ({ children, HeaderChild, siteName }: LayoutProps) => (
     <>
         <HeaderChild />
         <main className={styles.main}>{children}</main>
-        <FooterUI />
+        <FooterUI siteName={siteName} />
     </>
 );
