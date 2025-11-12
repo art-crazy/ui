@@ -11,13 +11,11 @@ interface HeaderUIProps {
 }
 
 export const HeaderUI = ({ query, setQuery, handleSubmit }: HeaderUIProps) => {
-  // const pathname = usePathname();
-
   const handleLogoClick = (e: React.MouseEvent) => {
-    // if (pathname === '/') {
+    if (window.location.pathname === '/') {
       e.preventDefault();
       window.location.reload();
-    // }
+    }
   };
 
   return (
