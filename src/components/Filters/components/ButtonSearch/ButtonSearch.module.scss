@@ -1,10 +1,9 @@
-@use 'sass:color';
 @use '@/styles/vars.scss' as *;
 
 .filterActions {
   margin-top: 1rem;
   padding-top: 1rem;
-  border-top: 1px solid #e9ecef;
+  border-top: 1px solid $gray-200;
   display: flex;
   justify-content: flex-end;
 }
@@ -12,7 +11,7 @@
 .applyButton {
   padding: 0.5rem 1rem;
   background: $primary-color;
-  color: #fff;
+  color: $color-white;
   border: none;
   border-radius: 4px;
   font-weight: 500;
@@ -20,12 +19,12 @@
   transition: all 0.2s;
 
   &:hover:not(.disabled) {
-    background: color.adjust($primary-color, $lightness: -10%);
+    background: $primary-color-hover;
   }
 
   &.disabled {
-    background: #e9ecef;
-    color: #adb5bd;
+    background: $bg-disabled;
+    color: $color-text-disabled;
     cursor: not-allowed;
   }
 }

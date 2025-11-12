@@ -2,7 +2,7 @@
 
 .footer {
   background-color: $background-color;
-  border-top: 1px solid #eee;
+  border-top: 1px solid $border-primary;
   padding: 32px 0 16px 0;
   display: flex;
   flex-wrap: wrap;
@@ -25,7 +25,7 @@
     margin-right: 8px;
   }
   a {
-    color: #444;
+    color: $color-text-tertiary;
     text-decoration: none;
     font-size: 14px;
   }
@@ -41,7 +41,7 @@
     width: 100%;
     text-align: center;
     font-size: 13px;
-    color: #aaa;
+    color: $color-text-disabled;
     margin: 36px 0 52px 0;
   }
 }

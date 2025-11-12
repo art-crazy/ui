@@ -1,7 +1,7 @@
 @use '@/styles/vars' as *;
 
 .filledHeart {
-  fill: #FF3B30 !important;
+  fill: $accent-red !important;
 }
 
 .button {
@@ -9,36 +9,36 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 1rem;
-  background: #fff;
-  border: 1px solid #dee2e6;
+  background: $color-white;
+  border: 1px solid $border-quinary;
   border-radius: 4px;
-  color: #495057;
+  color: $gray-700;
   font-size: 0.875rem;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease;
 
   &:hover {
-    background: #f8f9fa;
-    border-color: #ced4da;
+    background: $bg-tertiary;
+    border-color: $border-lightest;
   }
 
   &:active {
-    background: #e9ecef;
+    background: $bg-disabled;
   }
 
   &.saved {
-    background: #e7f5ff;
-    border-color: #74c0fc;
-    color: #1971c2;
+    background: $accent-blue-light;
+    border-color: $accent-blue-border;
+    color: $accent-blue-text;
 
     &:hover {
-      background: #d0ebff;
-      border-color: #4dabf7;
+      background: $accent-blue-hover-bg;
+      border-color: $accent-blue-hover-border;
     }
 
     &:active {
-      background: #b6e0ff;
+      background: $accent-blue-active;
     }
   }
 

@@ -1,3 +1,5 @@
+@use '@/styles/vars.scss' as *;
+
 .recipeList {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -7,10 +9,10 @@
 
 .recipeCard {
   display: block;
-  background: #fff;
+  background: $color-white;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px $shadow-lg;
   text-decoration: none;
   color: inherit;
 }
@@ -38,13 +40,13 @@
     margin: 0 0 0.75rem;
     font-size: 1.25rem;
     font-weight: 600;
-    color: #333;
+    color: $color-text-secondary;
   }
 
   p {
     margin: 0 0 1rem;
     font-size: 0.875rem;
-    color: #666;
+    color: $color-text-muted;
     line-height: 1.5;
   }
 }
@@ -54,7 +56,7 @@
   flex-wrap: wrap;
   gap: 1rem;
   font-size: 0.875rem;
-  color: #666;
+  color: $color-text-muted;
 
   span {
     display: flex;

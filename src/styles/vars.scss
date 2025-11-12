@@ -1,8 +1,90 @@
-// Colors
-$background-color: #fafafa;
+// ========================================
+// ЦВЕТОВАЯ ПАЛИТРА
+// ========================================
+// SCSS переменные теперь читают значения из CSS Custom Properties
+// Это позволяет переопределять цвета из основного проекта
+
+// Основные цвета бренда
+$primary-color: var(--primary-color, #ff6b00);
+$primary-color-hover: var(--primary-color-hover, #ff8533);
+$primary-color-light: var(--primary-color-light, rgba(255, 107, 0, 0.05));
+
+// Акцентные цвета
+$accent-red: var(--accent-red, #FF3B30);
+$accent-gold: var(--accent-gold, #FFB800);
+$accent-blue: var(--accent-blue, #0070f3);
+$accent-blue-light: var(--accent-blue-light, #e7f5ff);
+$accent-blue-border: var(--accent-blue-border, #74c0fc);
+$accent-blue-text: var(--accent-blue-text, #1971c2);
+$accent-blue-hover-bg: var(--accent-blue-hover-bg, #d0ebff);
+$accent-blue-hover-border: var(--accent-blue-hover-border, #4dabf7);
+$accent-blue-active: var(--accent-blue-active, #b6e0ff);
+
+// Нейтральные цвета (монохром)
+$color-white: var(--color-white, #fff);
+$color-black: var(--color-black, #000);
+$color-text-primary: var(--color-text-primary, #222);
+$color-text-secondary: var(--color-text-secondary, #333);
+$color-text-tertiary: var(--color-text-tertiary, #444);
+$color-text-muted: var(--color-text-muted, #666);
+$color-text-light: var(--color-text-light, #888);
+$color-text-disabled: var(--color-text-disabled, #adb5bd);
+
+// Серые оттенки для фонов
+$bg-primary: var(--bg-primary, #fafafa);
+$bg-secondary: var(--bg-secondary, #f9f9f9);
+$bg-tertiary: var(--bg-tertiary, #f8f9fa);
+$bg-quaternary: var(--bg-quaternary, #f5f5f5);
+$bg-quinary: var(--bg-quinary, #f3f4f6);
+$bg-hover: var(--bg-hover, #f0f0f0);
+$bg-disabled: var(--bg-disabled, #e9ecef);
+
+// Серые оттенки для границ
+$border-primary: var(--border-primary, #eee);
+$border-secondary: var(--border-secondary, #e6e6e6);
+$border-tertiary: var(--border-tertiary, #e5e7eb);
+$border-quaternary: var(--border-quaternary, #e5e5e5);
+$border-quinary: var(--border-quinary, #dee2e6);
+$border-hover: var(--border-hover, #d1d5db);
+$border-light: var(--border-light, #ccc);
+$border-lighter: var(--border-lighter, #d9d9d9);
+$border-lightest: var(--border-lightest, #ced4da);
+
+// Дополнительные серые тона
+$gray-100: var(--gray-100, #f1f1f1);
+$gray-200: var(--gray-200, #e9ecef);
+$gray-300: var(--gray-300, #dee2e6);
+$gray-400: var(--gray-400, #ced4da);
+$gray-500: var(--gray-500, #adb5bd);
+$gray-600: var(--gray-600, #6c757d);
+$gray-700: var(--gray-700, #495057);
+$gray-800: var(--gray-800, #374151);
+$gray-900: var(--gray-900, #6b7280);
+
+// Цвета для скроллбара
+$scrollbar-track: var(--scrollbar-track, rgba(0, 0, 0, 0.05));
+$scrollbar-thumb: var(--scrollbar-thumb, rgba(0, 0, 0, 0.2));
+$scrollbar-thumb-hover: var(--scrollbar-thumb-hover, rgba(0, 0, 0, 0.3));
+
+// Цвета для теней
+$shadow-sm: var(--shadow-sm, rgba(0, 0, 0, 0.04));
+$shadow-md: var(--shadow-md, rgba(0, 0, 0, 0.06));
+$shadow-base: var(--shadow-base, rgba(0, 0, 0, 0.08));
+$shadow-lg: var(--shadow-lg, rgba(0, 0, 0, 0.1));
+$shadow-xl: var(--shadow-xl, rgba(0, 0, 0, 0.15));
+$shadow-2xl: var(--shadow-2xl, rgba(0, 0, 0, 0.2));
+$shadow-3xl: var(--shadow-3xl, rgba(0, 0, 0, 0.25));
+
+// Цвета для оверлеев
+$overlay-light: var(--overlay-light, rgba(255, 255, 255, 0.8));
+$overlay-medium: var(--overlay-medium, rgba(255, 255, 255, 0.9));
+$overlay-dark: var(--overlay-dark, rgba(0, 0, 0, 0.9));
+
+// Устаревшие переменные (для обратной совместимости)
+$background-color: $bg-primary;
+
+// Прочие параметры
 $border-radius-m: 8px;
-$primary-color: #ff6b00;
-$primary-color-hover: #ff8533;
 
 // ВАЖНО: page-container - это базовый миксин, который должен использоваться на ВСЕХ страницах приложения.
 // Он обеспечивает:

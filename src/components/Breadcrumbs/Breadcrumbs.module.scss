@@ -1,3 +1,5 @@
+@use '@/styles/vars.scss' as *;
+
 .breadcrumbs {
     padding-bottom: 1rem;
     margin-bottom: 2rem;
@@ -17,27 +19,27 @@
     .homeLink {
         display: flex;
         align-items: center;
-        color: #666;
+        color: $color-text-muted;
         text-decoration: none;
         transition: color 0.2s;
 
         &:hover {
-            color: #000;
+            color: $color-black;
         }
     }
 
     .path {
-        color: #666;
+        color: $color-text-muted;
         text-decoration: none;
         transition: color 0.2s;
 
         &:hover {
-            color: #000;
+            color: $color-black;
         }
     }
 
     .separator {
-        color: #666;
+        color: $color-text-muted;
     }
 
     .titleWrapper {

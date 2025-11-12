@@ -1,7 +1,9 @@
+@use '@/styles/vars.scss' as *;
+
 .noResults {
   text-align: center;
   padding: 40px 20px;
-  color: #666;
+  color: $color-text-muted;
 
   p {
     font-size: 18px;

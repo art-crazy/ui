@@ -18,7 +18,7 @@
 .mainImage {
   position: relative;
   width: 750px;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 24px $shadow-base;
 }
 
 .imageMain {
@@ -38,7 +38,7 @@
     font-weight: 600;
     line-height: 1.2;
     margin: 0;
-    color: #222;
+    color: $color-text-primary;
   }
 }
 
@@ -47,11 +47,11 @@
   align-items: center;
   gap: 12px;
   font-size: 20px;
-  color: #FFB800;
+  color: $accent-gold;
 }
 
 .ratingText {
-  color: #666;
+  color: $color-text-muted;
   font-size: 15px;
 }
 
@@ -91,8 +91,8 @@
 }
 
 .saveBtn {
-  background: #222;
-  color: #fff;
+  background: $color-text-primary;
+  color: $color-white;
   border: none;
   border-radius: 6px;
   padding: 8px 16px;
@@ -109,13 +109,13 @@
 
 .subImage {
   flex: 1;
-  background: #eee;
+  background: $border-primary;
   border-radius: 6px;
   min-height: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #bbb;
+  color: $border-light;
   font-size: 15px;
 }
 
@@ -130,7 +130,7 @@
     font-size: 1.75rem;
     font-weight: 600;
     margin-bottom: 24px;
-    color: #222;
+    color: $color-text-primary;
     text-align: center;
   }
 }
@@ -142,19 +142,19 @@
 }
 
 .step {
-  background: #fff;
+  background: $color-white;
   border-radius: $border-radius-m;
   padding: 32px;
   margin-bottom: 24px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
-  border: 1px solid #f0f0f0;
+  box-shadow: 0 2px 12px $shadow-sm;
+  border: 1px solid $bg-hover;
 }
 
 .stepTitle {
   font-weight: 600;
   font-size: 1.25rem;
   margin-bottom: 16px;
-  color: #222;
+  color: $color-text-primary;
 }
 
 .stepImage {
@@ -162,7 +162,7 @@
   margin-bottom: 24px;
   position: relative;
   width: 100%;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 16px $shadow-md;
 }
 
 .image {
@@ -183,14 +183,14 @@
   font-size: 1.75rem;
   font-weight: 600;
   margin-bottom: 24px;
-  color: #222;
+  color: $color-text-primary;
 }
 
 .commentInput {
   width: 100%;
   min-height: 80px;
   border-radius: 12px;
-  border: 1px solid #eee;
+  border: 1px solid $border-primary;
   padding: 16px;
   margin-bottom: 16px;
   font-size: 15px;
@@ -199,13 +199,13 @@
 
   &:focus {
     outline: none;
-    border-color: #222;
+    border-color: $color-text-primary;
   }
 }
 
 .postBtn {
-  background: #222;
-  color: #fff;
+  background: $color-text-primary;
+  color: $color-white;
   border: none;
   border-radius: $border-radius-m;
   padding: 12px 32px;
@@ -216,17 +216,17 @@
   margin-bottom: 24px;
 
   &:hover {
-    background: #333;
+    background: $color-text-secondary;
   }
 }
 
 .comment {
-  background: #fff;
+  background: $color-white;
   border-radius: 12px;
   padding: 24px;
   margin-bottom: 16px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
-  border: 1px solid #f0f0f0;
+  box-shadow: 0 2px 12px $shadow-sm;
+  border: 1px solid $bg-hover;
 }
 
 .commentHeader {
@@ -242,24 +242,24 @@
 
 .userName {
   font-weight: 600;
-  color: #222;
+  color: $color-text-primary;
 }
 
 .commentDate {
-  color: #888;
+  color: $color-text-light;
   font-size: 14px;
 }
 
 .commentText {
   margin-bottom: 12px;
   line-height: 1.5;
-  color: #444;
+  color: $color-text-tertiary;
 }
 
 .commentActions {
   display: flex;
   gap: 20px;
-  color: #666;
+  color: $color-text-muted;
   font-size: 14px;
 }
 
@@ -315,7 +315,7 @@
       font-size: 1.75rem;
       font-weight: 600;
       margin-bottom: 24px;
-      color: #222;
+      color: $color-text-primary;
       text-align: center;
     }
   }

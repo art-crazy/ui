@@ -1,7 +1,9 @@
+@use '@/styles/vars.scss' as *;
+
 .button {
-  background: #fff;
-  color: #333;
-  border: 1px solid #e6e6e6;
+  background: $color-white;
+  color: $color-text-secondary;
+  border: 1px solid $border-secondary;
   border-radius: 8px;
   padding: 8px 16px;
   font-size: 14px;
@@ -15,7 +17,7 @@
   gap: 8px;
   font-weight: 500;
   white-space: nowrap;
-  box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 4px 6px 4px $shadow-xl;
 
   svg {
     flex-shrink: 0;
@@ -26,18 +28,18 @@
   }
 
   &:hover {
-    background: #f5f5f5;
-    border-color: #d9d9d9;
-    box-shadow: 4px 8px 6px rgba(0, 0, 0, 0.2);
+    background: $bg-quaternary;
+    border-color: $border-lighter;
+    box-shadow: 4px 8px 6px $shadow-2xl;
 
     svg {
-      fill: #FF3B30;
+      fill: $accent-red;
     }
   }
 
   &:active {
-    background: #e6e6e6;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+    background: $border-secondary;
+    box-shadow: 4px 4px 8px $shadow-3xl;
   }
 }
 
