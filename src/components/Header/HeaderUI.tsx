@@ -4,7 +4,13 @@ import Search from './Search/Search';
 import MobileNavUI from './MobileNav/MobileNavUI';
 import NavItemUI from "../Navigation/NavItemUI";
 
-export const HeaderUI = (router: any) => {
+interface HeaderUIProps {
+  query: string;
+  setQuery: (query: string) => void;
+  handleSubmit: (e: React.FormEvent) => void;
+}
+
+export const HeaderUI = ({ query, setQuery, handleSubmit }: HeaderUIProps) => {
   // const pathname = usePathname();
 
   const handleLogoClick = (e: React.MouseEvent) => {
@@ -22,7 +28,9 @@ export const HeaderUI = (router: any) => {
         </a>
         <nav className={styles.headerRight} aria-label="Основная навигация">
           <Search
-              router={router}
+              query={query}
+              setQuery={setQuery}
+              handleSubmit={handleSubmit}
           />
           <div className={styles.desktopNav}>
             <NavItemUI type="collections" className={styles.desktopNavItem} />

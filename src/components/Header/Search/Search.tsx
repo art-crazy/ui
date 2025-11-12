@@ -1,21 +1,14 @@
-import React, {useState} from 'react';
+import React from 'react';
 import styles from './Search.module.scss';
 import SearchIcon from '@/components/icons/SearchIcon';
 
-const Search = (router: any) => {
-  const [query, setQuery] = useState('');
-  // const router = useRouter();
+interface SearchProps {
+  query: string;
+  setQuery: (query: string) => void;
+  handleSubmit: (e: React.FormEvent) => void;
+}
 
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (query.trim()) {
-      router.push(`/recepty?search=${encodeURIComponent(query.trim())}`);
-    } else {
-      router.push('/recepty');
-    }
-  };
-
+const Search = ({ query, setQuery, handleSubmit }: SearchProps) => {
   return (
     <form className={styles.searchContainer} onSubmit={handleSubmit} role="search">
       <input
