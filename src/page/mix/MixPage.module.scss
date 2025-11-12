@@ -142,12 +142,12 @@
 }
 
 .step {
-  background: $color-white;
+  background: $bg-secondary;
   border-radius: $border-radius-m;
   padding: 32px;
   margin-bottom: 24px;
   box-shadow: 0 2px 12px $shadow-sm;
-  border: 1px solid $bg-hover;
+  border: 1px solid $border-primary;
 }
 
 .stepTitle {
@@ -221,12 +221,12 @@
 }
 
 .comment {
-  background: $color-white;
+  background: $bg-secondary;
   border-radius: 12px;
   padding: 24px;
   margin-bottom: 16px;
   box-shadow: 0 2px 12px $shadow-sm;
-  border: 1px solid $bg-hover;
+  border: 1px solid $border-primary;
 }
 
 .commentHeader {
