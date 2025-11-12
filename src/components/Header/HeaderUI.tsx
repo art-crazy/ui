@@ -8,9 +8,11 @@ interface HeaderUIProps {
   query: string;
   setQuery: (query: string) => void;
   handleSubmit: (e: React.FormEvent) => void;
+  logoIcon: string;
+  logoText: string;
 }
 
-export const HeaderUI = ({ query, setQuery, handleSubmit }: HeaderUIProps) => {
+export const HeaderUI = ({ query, setQuery, handleSubmit, logoIcon, logoText }: HeaderUIProps) => {
   const handleLogoClick = (e: React.MouseEvent) => {
     if (window.location.pathname === '/') {
       e.preventDefault();
@@ -22,7 +24,7 @@ export const HeaderUI = ({ query, setQuery, handleSubmit }: HeaderUIProps) => {
     <>
       <header className={styles.header}>
         <a href="/" className={styles.logo} onClick={handleLogoClick}>
-          <span role="img" aria-label="Логотип">🍴</span> Что приготовить
+          <span role="img" aria-label="Логотип">{logoIcon}</span> {logoText}
         </a>
         <nav className={styles.headerRight} aria-label="Основная навигация">
           <Search
