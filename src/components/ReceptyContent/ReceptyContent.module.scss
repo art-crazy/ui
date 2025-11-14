@@ -2,9 +2,10 @@
 
 .content {
   min-height: 400px;
-  background: transparent;
+  background: $bg-secondary;
   border-radius: $border-radius-m;
   padding: 2rem;
+  border: 1px solid $border-primary;
 }
 
 @media (max-width: 768px) {
