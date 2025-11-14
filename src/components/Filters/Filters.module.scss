@@ -1,8 +1,9 @@
 @use '@/styles/vars.scss' as *;
 
 .filters {
-  background: $color-white;
+  background: $bg-secondary;
   border-radius: 8px;
   padding: 1rem;
   box-shadow: 0 2px 4px $shadow-sm;
+  border: 1px solid $border-primary;
 }

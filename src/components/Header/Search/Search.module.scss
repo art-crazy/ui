@@ -19,8 +19,8 @@
 
   &:focus {
     outline: none;
-    border-color: $border-lighter;
-    background: $color-white;
+    border-color: $border-hover;
+    background: $bg-secondary;
   }
 }
 
