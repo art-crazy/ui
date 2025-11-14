@@ -1,9 +1,9 @@
 @use '@/styles/vars.scss' as *;
 
 .button {
-  background: $color-white;
+  background: $bg-secondary;
   color: $color-text-secondary;
-  border: 1px solid $border-secondary;
+  border: 1px solid $border-primary;
   border-radius: 8px;
   padding: 8px 16px;
   font-size: 14px;
@@ -28,8 +28,8 @@
   }
 
   &:hover {
-    background: $bg-quaternary;
-    border-color: $border-lighter;
+    background: $bg-tertiary;
+    border-color: $border-hover;
     box-shadow: 4px 8px 6px $shadow-2xl;
 
     svg {
@@ -38,7 +38,7 @@
   }
 
   &:active {
-    background: $border-secondary;
+    background: $bg-quaternary;
     box-shadow: 4px 4px 8px $shadow-3xl;
   }
 }
