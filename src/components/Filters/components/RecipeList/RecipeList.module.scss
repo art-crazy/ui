@@ -9,12 +9,19 @@
 
 .recipeCard {
   display: block;
-  background: $color-white;
+  background: $bg-secondary;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 6px $shadow-lg;
   text-decoration: none;
   color: inherit;
+  border: 1px solid $border-primary;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: $bg-tertiary;
+    border-color: $border-hover;
+  }
 }
 
 .imageContainer {
