@@ -10,9 +10,10 @@ interface HeaderUIProps {
   handleSubmit: (e: React.FormEvent) => void;
   logoIcon: string;
   logoText: string;
+  currentPath?: string;
 }
 
-export const HeaderUI = ({ query, setQuery, handleSubmit, logoIcon, logoText }: HeaderUIProps) => {
+export const HeaderUI = ({ query, setQuery, handleSubmit, logoIcon, logoText, currentPath }: HeaderUIProps) => {
   const handleLogoClick = (e: React.MouseEvent) => {
     if (window.location.pathname === '/') {
       e.preventDefault();
@@ -33,12 +34,12 @@ export const HeaderUI = ({ query, setQuery, handleSubmit, logoIcon, logoText }: 
               handleSubmit={handleSubmit}
           />
           <div className={styles.desktopNav}>
-            <NavItemUI type="collections" className={styles.desktopNavItem} />
-            <NavItemUI type="mix" className={styles.desktopNavItem} />
+            <NavItemUI type="collections" className={styles.desktopNavItem} currentPath={currentPath} />
+            <NavItemUI type="mix" className={styles.desktopNavItem} currentPath={currentPath} />
           </div>
         </nav>
       </header>
-      <MobileNavUI />
+      <MobileNavUI currentPath={currentPath} />
     </>
   );
 };

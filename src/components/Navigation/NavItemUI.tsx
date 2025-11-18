@@ -7,11 +7,10 @@ interface NavItemProps {
   type: 'mix' | 'collections';
   className?: string;
   iconClassName?: string;
+  currentPath?: string;
 }
 
-const NavItemUI: React.FC<NavItemProps> = ({ type, className, iconClassName }) => {
-  // const pathname = usePathname();
-
+const NavItemUI: React.FC<NavItemProps> = ({ type, className, iconClassName, currentPath }) => {
   const config = {
     mix: {
       href: '/recepty',
@@ -27,18 +26,15 @@ const NavItemUI: React.FC<NavItemProps> = ({ type, className, iconClassName }) =
     }
   };
 
-  // @ts-ignore
   const { href, label, icon: Icon, activePath } = config[type];
-  // const isActive = pathname === activePath;
+  const isActive = currentPath?.startsWith(activePath) && (activePath === '/' ? currentPath === '/' : true);
 
   return (
       <a
           href={href}
-          className={`${styles.navItem}
-          // %{isActive ? styles.active : ''}
-       ${className || ''}`}
+          className={`${styles.navItem} ${isActive ? styles.active : ''} ${className || ''}`}
           aria-label={label}
-          // aria-current={isActive ? 'page' : undefined}
+          aria-current={isActive ? 'page' : undefined}
       >
         <Icon className={`${styles.icon} ${iconClassName || ''}`} aria-hidden="true" />
         <span>{label}</span>
